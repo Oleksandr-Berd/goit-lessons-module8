@@ -8,14 +8,24 @@ import { LinkWithPrevPageState } from 'components/LinkWithPrevPageState/LinkWith
 // const FALLBACK_THUMB =
 //   'https://ixbt.online/live/images/original/16/95/46/2022/09/06/314f024dc6.jpg';
 
-export const Post = ({ title, likes = 0, thumbSrc = FALLBACK_THUMB, id }) => {
+export const Post = ({
+  title,
+  likes = 0,
+  isLiked,
+  thumbSrc = FALLBACK_THUMB,
+  id,
+  onLike,
+}) => {
+  const handleLikeClick = () => {
+    onLike(id);
+  };
   return (
     <SC.Card>
       <SC.Thumb src={thumbSrc} alt="" />
       <SC.Container>
         <Heading level={2}>{title}</Heading>
         <SC.Likes>
-          <Likes amount={likes} />
+          <Likes amount={likes} isLiked={isLiked} onLike={handleLikeClick} />
           <LinkWithPrevPageState to={`/posts/${id}`}>
             View post
           </LinkWithPrevPageState>
@@ -29,4 +39,6 @@ Post.propTypes = {
   likes: PropTypes.number,
   title: PropTypes.string.isRequired,
   thumbSrc: PropTypes.string,
+  isLiked: PropTypes.bool,
+  onLike: PropTypes.func,
 };

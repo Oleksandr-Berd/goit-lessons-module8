@@ -7,3 +7,36 @@
 .header {
   padding: 45px 0;
 }
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.likedPostsButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+  font-style: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.totalLikes {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-style: 8px;
+  color: black;
+}
