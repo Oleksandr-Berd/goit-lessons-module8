@@ -1,18 +1,5 @@
-export const ACTION = {
-  addLikedPost: 'likedPosts/add',
-  removeLikedPost: 'likedPosts/remove',
-};
+import { createAction } from '@reduxjs/toolkit';
 
-export const addLikedPost = post => {
-  return {
-    type: ACTION.addLikedPost,
-    payload: post,
-  };
-};
+export const addLikedPost = createAction('likedPosts/add');
 
-export const removeLikedPost = id => {
-  return {
-    type: ACTION.removeLikedPost,
-    payload: id,
-  };
-};
+export const removeLikedPost = createAction('likedPosts/remove');

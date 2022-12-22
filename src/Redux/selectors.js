@@ -1,3 +1,1 @@
-export const getLikedPosts = state => {
-  return state.likedPost;
-};
+// export const getLikedPosts = state => state.likedPosts.items;

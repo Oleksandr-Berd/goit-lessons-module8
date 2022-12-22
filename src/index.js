@@ -5,7 +5,7 @@ import './index.css';
 import { PaginationProvider } from 'components/context/pagination';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { store } from './Redux';
+import { store } from './Redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

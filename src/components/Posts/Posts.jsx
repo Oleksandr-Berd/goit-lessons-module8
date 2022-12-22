@@ -11,8 +11,7 @@ import { usePaginationContext } from 'components/context/pagination';
 import { Pagination } from 'components/Pagination/Pagination';
 import { useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addLikedPost, removeLikedPost } from 'Redux/actions';
-import { getLikedPosts } from 'Redux/selectors';
+import { addPost, removePost, getLikedPosts } from 'Redux/likedPosts/slices';
 
 export const Posts = () => {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -44,12 +43,10 @@ export const Posts = () => {
   const handleLikeClick = id => {
     const isLiked = likedIds.has(id);
     if (isLiked) {
-      dispatch(removeLikedPost(id));
+      dispatch(removePost(id));
     } else {
       const likedPost = articles.hits.find(post => post.objectID === id);
-      dispatch(
-        addLikedPost({ id: likedPost.objectID, title: likedPost.title })
-      );
+      dispatch(addPost({ id: likedPost.objectID, title: likedPost.title }));
     }
   };
 
