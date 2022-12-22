@@ -1,8 +1,8 @@
 {
-  "name": "goit-lessons-module6",
+  "name": "goit-lesson-module7",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://oleksandr-berd.github.io/goit-lessons-module6/",
+  "homepage": "https://oleksandr-berd.github.io/goit-lesson-module7/",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.3",
     "@reduxjs/toolkit": "^1.9.1",
