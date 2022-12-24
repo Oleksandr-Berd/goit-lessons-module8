@@ -3,12 +3,12 @@ import { Logo } from 'components/Logo/Logo';
 import { HeaderNav } from './HeaderNav/HeaderNav';
 import styles from './Header.module.css';
 import { useSelector } from 'react-redux';
-import { getLikedPosts } from 'Redux/likedPosts/slices';
+import { selectLikedPostsIds } from 'Redux/likedPosts/slice';
 
 export const Header = () => {
   const isDesktop = window.innerWidth > 1200;
 
-  const likedPosts = useSelector(getLikedPosts);
+  const likedPosts = useSelector(selectLikedPostsIds);
 
   return (
     <header className={styles.header}>
