@@ -40,3 +40,10 @@
   font-style: 8px;
   color: black;
 }
+
+.authLink {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
